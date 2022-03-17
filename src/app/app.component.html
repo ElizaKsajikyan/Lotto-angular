@@ -1,0 +1,10 @@
+<div>
+  <h1 class="general-title">LOTTO</h1>
+  <button class="btn" typeof="button" (click)="lotto()" [disabled]="disableBtn" *ngIf="!gameOver">check number</button>
+  <div class="numbers-container">
+    <div class="number" *ngFor="let numb of removedNumbersArray">{{numb}}</div>
+  </div>
+</div>
+<div class="cards-container">
+  <app-card *ngFor="let item of cardCountPrUser" [cardNumber]="item"></app-card>
+</div>

@@ -1,0 +1,11 @@
+<div class="card">
+  <h2 class="card-title">{{'Card N: ' + cardNumber }}</h2>
+  <div class="card-row" *ngFor="let item of card">
+    <div class="card-row-item" *ngFor="let val of item">
+      <span *ngIf="val!=='empty'" class="card-row-item-number">
+        {{val}}
+      </span>
+      <div class="bullet" *ngIf="val==='empty'"></div>
+    </div>
+  </div>
+</div>
